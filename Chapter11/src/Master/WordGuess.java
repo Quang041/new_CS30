@@ -37,7 +37,7 @@ public class WordGuess {
 		"--------------------------------------\n");  //Introduce the user to the game//
 		
 		
-		File fileText = new File("../Chapter_11/src/SkillBuilder/words");  //Access to the file of words I created//
+		File fileText = new File("../Chapter11/src/Master/words");  //Access to the file of words I created//
 		List <String> words = new ArrayList<>();  //Make a list for words from the words file//
 
 		/**Determine how many lines in the file.
