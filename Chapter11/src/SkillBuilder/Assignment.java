@@ -10,7 +10,7 @@ public class Assignment {
 	public static void main(String[] args) {
 		
 		
-		String textFile = ("../Chapter_11/src/Assignment_Something_IDK.txt");
+		String textFile = ("../Chapter11/src/SkillBuilder/Assignment_Something_IDK.txt");
 		
 		try (BufferedReader bufferedreader = new BufferedReader(new FileReader(textFile))) {
 			String line;
