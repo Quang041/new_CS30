@@ -26,11 +26,19 @@ public class Puck2 extends Puck1 implements Comparable {
 	public static void main(String[] args) {
 		Scanner userinput = new Scanner(System.in);
 		
-		System.out.print("Enter the first puck weight:");
+		System.out.println("-1: First puck is lighter.\n"+
+				"0: Two pucks are the same.\n" +
+				"1: The first puck is heaver\n"+
+				"                              ");
+		
+		
+		System.out.print("Enter the first puck weight: ");
 		double puck1 = userinput.nextDouble();
-		System.out.print("Enter the first puck weight:");
+		System.out.print("Enter the first puck weight: ");
 		double puck2 = userinput.nextDouble();
 
 		
-	}
-}
+		Puck2 puck_1 = new Puck2(puck1);
+		Puck2 puck_2 = new Puck2(puck2);
+		System.out.println(puck_1.compareTo(puck_2));
+}}
