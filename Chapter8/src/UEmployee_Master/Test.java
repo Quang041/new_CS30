@@ -9,7 +9,7 @@ public class Test {
 		Scanner userinput = new Scanner(System.in);
 		
 		System.out.print("Enter your name: ");
-		String name = userinput.next();
+		String name = userinput.nextLine();
 		System.out.print("Enter your current salary: $");
 		double salary = userinput.nextDouble();
 		
