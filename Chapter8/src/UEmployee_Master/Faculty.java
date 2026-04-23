@@ -12,7 +12,7 @@ public class Faculty extends UEmployee {
 	}
 	
 	public String getFaculty() {
-		String work = getName() + ", income $" + getSalary() + " currentky working at " + workplace;
+		String work = getName() + ", income $" + getSalary() + " currently working at " + workplace;
 		return work;
 	}
 }

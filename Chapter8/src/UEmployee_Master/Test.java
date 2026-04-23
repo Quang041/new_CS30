@@ -1,29 +1,55 @@
 package UEmployee_Master;
-
 import java.util.Scanner;
-
 public class Test {
 	
 	public static void main(String[] args) {
 		
 		Scanner userinput = new Scanner(System.in);
 		
+		
+		String name;
+		String salaryInput;
+		double salary = 0;
+		boolean i = true;
+		
+		do {
 		System.out.print("Enter your name: ");
-		String name = userinput.nextLine();
+		name = userinput.nextLine();
+		
 		System.out.print("Enter your current salary: $");
-		double salary = userinput.nextDouble();
+		salaryInput = userinput.nextLine();
+		
+		try {
+			
+		salary = Double.parseDouble(salaryInput);
+		/**
+		 * If statement
+		 */
+		if (!name.isBlank() && salary > 0) {
+			i = false;
+		}
+		else if (!(name instanceof String) || !(((Object)salary) instanceof Double)) {
+			System.out.print("Invalid. Please try again.");
+		}
+		
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid salary. Please enter a numeric value.");
+			System.out.println("----------------------------------------------------------");
+		}
+		} while (i==true);
+		//////
+		
 		
 		UEmployee employee = new UEmployee(name,salary);
 		System.out.println("----------------------------------------------------------");
-
 		System.out.println("User's information taken successfully");
 		System.out.println("Name: " + employee.getName());
 		System.out.println("Salary: $" + employee.getSalary());
 		System.out.println("----------------------------------------------------------");
-
 		System.out.print("Enter your faculty: ");
 		String faculty = userinput.next();
-		Faculty employee_1 = new Faculty(name,salary); 
+		Faculty employee_1 = new Faculty(name,salary);
 		employee_1.setFaculty(faculty);
 		
 		System.out.print("Enter your position: ");
@@ -41,3 +67,4 @@ public class Test {
 		
 	}
 }
+
