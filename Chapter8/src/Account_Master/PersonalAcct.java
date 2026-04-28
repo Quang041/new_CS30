@@ -1,36 +1,42 @@
 package Account_Master;
 
+import java.text.NumberFormat;
+
 public class PersonalAcct extends Account {
 	
 	private double Personal_Acct;
-	public PersonalAcct(String ID) {
-		super(ID);
-		Personal_Acct = getBalance();
+	public PersonalAcct(double bal, String fName, String lName, String st, String city1, String pro, String postal1) {
+		super(bal, fName, lName, st, city1, pro, postal1);
+		Personal_Acct = bal;
 	}
 	
 	public void deposit(double amt) {
-		Personal_Acct += amt;
+		super.deposit(amt);
 	}
 	
 	public void withdrawal(double amt) {
-	 	if (amt <= Personal_Acct) {
-	 		Personal_Acct -= amt;
-	 		if (Personal_Acct < 100) {
-	 			Personal_Acct -= 2;
-	 		}
-	 		else {
-	 			Personal_Acct -= 0;
-	 		}
-	 	} else {
-	 		System.out.println("Not enough money in account.");
-	 	}
-	}
+	 	if (amt <= getBalance()) {
+           super.withdrawal(amt); // use parent's withdrawal
+           if (getBalance() < 100) {
+               super.withdrawal(2); // charge $2 fee
+           }
+       } else {
+           System.out.println("Not enough money in account.");
+       }
+    }
 	
 	public String returnBalance() {
 		String balance = String.valueOf(Personal_Acct);
 		return(balance);
 	}
 	
+	public String toString() {
+		return(super.toString());
+	}
+	
+	
+	
 	
 	
 }
+

@@ -1,33 +1,133 @@
 package Account_Master;
-
 import java.util.Scanner;
-
 public class client_test {
 	public static void main(String[] args) {
 		Scanner userinput = new Scanner(System.in);
 		
-		//Create new account//
-		System.out.println("Create new account.");
-		System.out.print("Enter your first name: ");
-		String fname = userinput.nextLine();
-		System.out.print("Enter your last name: ");
-		String lname = userinput.nextLine();
-		System.out.print("Enter your first deposit: ");
-		String balance = userinput.nextLine();
-		double bal = Double.parseDouble(balance);
 		
-		Account newAcct = new Account(bal,fname,lname);
-		System.out.println(newAcct.getID());
-		System.out.println(newAcct.getBalance());
+		
+		PersonalAcct personal = new PersonalAcct(1000,"Matthew","James","159 Macewan Valley","Calgary","Alberta","H6G 2F5");
+		BusinessAcct business = new BusinessAcct(10000,"Quang","Nguyen","123 Hauptstraße","Charlottenburg","Berlin","10115");
+		String decision;
 		
 		
 		
-		//Transaction//
-		System.out.println("1. Deposit\n" + "2. Withdraw\n" + "3. End the program");
-		String decision = userinput.nextLine();
-		if (decision.equals(1)) {
+		
+		while (true) {
+		/**
+		 * Decide, which account to make
+		 */
+		System.out.println("---------------------------------------");
+		System.out.println("Menu.\n" +
+							"1. Create New Personal Account.\n" +
+							"2. Create New Business Account.\n" +
+						    "3. Deposit.\n" +
+							"4. Withdraw.\n" +
+						    "5. Cancel.\n");
+		System.out.print("•");
+		decision = userinput.next();
+		System.out.println("---------------------------------------");
+		
+		if (decision.equals("1")) {
+			System.out.println("•Your account's ID: " + personal.getID());
+			System.out.println("•Your account's information:\n" + 
+							personal.toString());
+			System.out.println("---------------------------------------");
+		}
+		else if (decision.equals("2")) {
+			System.out.println("•Your account's ID: " + business.getID());
+			System.out.println("•Your account's information: \n" +
+							business.toString());
+			System.out.println("---------------------------------------");
+		}
+		else if (decision.equals("3")) {     //DEPOSIT//
+			System.out.println("1.Personal.\n" + "2.Business.");
+			System.out.print("Enter your account: ");
+			String dec = userinput.next();
+			
+			if (dec.equals("1")) {
+				System.out.print("Enter your ID: ");
+				String ID = userinput.next();
+				if (personal.getID().equals(ID)) {
+					System.out.print("Enter your amount: ");
+					double money = userinput.nextDouble();
+					personal.deposit(money);
+					System.out.println("Your balance: $" + personal.getBalance());
+					System.out.println("---------------------------------------");
+				}
+				else {
+					System.out.println("Please enter the right ID.");
+					System.out.println("---------------------------------------");
+				}
+				
+			}
+			else if (dec.equals("2")) {
+				System.out.print("Enter your ID: ");
+				String ID = userinput.next();
+				if (business.getID().equals(ID)) {
+					System.out.print("Enter your amount: ");
+					double money = userinput.nextDouble();
+					business.deposit(money);
+					System.out.println("Your balance: $" + business.getBalance());
+					System.out.println("---------------------------------------");
+				}
+				else {
+					System.out.println("Please enter the right ID.");
+					System.out.println("---------------------------------------");
+				}
+			}
 			
 		}
-
-	}
+		else if (decision.equals("4")) {  //WITHDRAW//
+			System.out.println("1.Personal.\n" + "2.Business.");
+			System.out.print("Enter your account: ");
+			String dec = userinput.next();
+			
+			if (dec.equals("1")) {
+				System.out.print("Enter your ID: ");
+				String ID = userinput.next();
+				
+				if (personal.getID().equals(ID)) {
+					System.out.print("Enter your amount: ");
+					double money = userinput.nextDouble();
+					
+					personal.withdrawal(money);
+					System.out.println("Your balance: $" + personal.getBalance());
+					System.out.println("---------------------------------------");
+				}
+				else {
+					System.out.println("Please enter the right ID.");
+					System.out.println("---------------------------------------");
+				}
+				
+			}
+			else if (dec.equals("2")) {
+				System.out.print("Enter your ID: ");
+				String ID = userinput.next();
+				
+				if (business.getID().equals(ID)) {
+					System.out.print("Enter your amount: ");
+					double money = userinput.nextDouble();
+					
+					business.withdrawal(money);
+					System.out.println("Your balance: $" + business.getBalance());
+					System.out.println("---------------------------------------");
+				}
+				else {
+					System.out.println("Please enter the right ID.");
+					System.out.println("---------------------------------------");
+				}
+			}
+		}
+		else if (decision.equals("5")) {
+			System.out.println("Goodbye. Thank you for your visit.");
+			System.out.println("---------------------------------------");
+			break;
+		}
+		else {
+			System.out.println("Error. Pleaes enter a value input.");
+			System.out.println("---------------------------------------");
+		}
+	}}
 }
+
