@@ -1,3 +1,18 @@
+/*
+
+Program: CSE 3130.java          Last Date of this Revision: April 29, 2026
+
+Purpose: Create PersonalAcct and BusinessAcct classes that inherit the Account class presented in Chapter 7.
+A personal account requires a minimum balance of $100. If the balance falls below this amount, then $2.00 
+is charged (withdrawal) to the account. A business account requires a minimum balance of $500, otherwise the 
+account if charged $10. Create client code to test the class.
+
+Author: Quang Nguyen 
+School: CHHS
+Course: Computer Programming 30
+ 
+
+*/
 package Account_Master;
 import java.util.Scanner;
 public class client_test {
