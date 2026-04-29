@@ -147,20 +147,105 @@ public class client_test {
 }
 
 /* Screen Dump
+ * 
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
 
-Enter your name: Quang Nguyen
-Enter your current salary: $10000
-----------------------------------------------------------
-User's information taken successfully
-Name: Quang Nguyen
-Salary: $10000.0
-----------------------------------------------------------
-Enter your faculty: UofA Applied Math
-Enter your position: Matrix Research
-----------------------------------------------------------
-Staff's information(Extened): 
-Faculty: Quang Nguyen, income $10000.0 currently working at UofA Applied Math
-Position: Quang Nguyen, income $10000.0 currently doing Matrix Research
+•1
+---------------------------------------
+•Your account's ID: MJames
+•Your account's information:
+	◦MJames
+	◦First name: Matthew
+	◦Last name: James
+	◦Street: 159 Macewan Valley
+	◦City: Calgary
+	◦Province: Alberta
+	◦Postal code: H6G 2F5
+	◦Current balance is $1,000.00
+---------------------------------------
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
+
+•3
+---------------------------------------
+1.Personal.
+2.Business.
+Enter your account: 1
+Enter your ID: MJames
+Enter your amount: 1000
+Your balance: $2000.0
+---------------------------------------
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
+
+•sda
+---------------------------------------
+Error. Pleaes enter a value input.
+---------------------------------------
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
+
+•4
+---------------------------------------
+1.Personal.
+2.Business.
+Enter your account: 1
+Enter your ID: MJames
+Enter your amount: 19999
+Not enough money in account.
+Your balance: $2000.0
+---------------------------------------
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
+
+•4
+---------------------------------------
+1.Personal.
+2.Business.
+Enter your account: 1
+Enter your ID: MJames
+Enter your amount: 1999
+Your balance: $-1.0
+---------------------------------------
+---------------------------------------
+Menu.
+1. Create New Personal Account.
+2. Create New Business Account.
+3. Deposit.
+4. Withdraw.
+5. Cancel.
+
+•5
+---------------------------------------
+Goodbye. Thank you for your visit.
+---------------------------------------
+
  
  */
  
