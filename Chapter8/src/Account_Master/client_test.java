@@ -146,3 +146,22 @@ public class client_test {
 	}}
 }
 
+/* Screen Dump
+
+Enter your name: Quang Nguyen
+Enter your current salary: $10000
+----------------------------------------------------------
+User's information taken successfully
+Name: Quang Nguyen
+Salary: $10000.0
+----------------------------------------------------------
+Enter your faculty: UofA Applied Math
+Enter your position: Matrix Research
+----------------------------------------------------------
+Staff's information(Extened): 
+Faculty: Quang Nguyen, income $10000.0 currently working at UofA Applied Math
+Position: Quang Nguyen, income $10000.0 currently doing Matrix Research
+ 
+ */
+ 
+ 
