@@ -18,9 +18,10 @@ public class Account {
 	 */
 	public Account(double bal,String fName, String lName, String st, String city1, String pro, String postal1)//include street, city, province or state, postal code or zip code
 	 {
-		balance = bal;
+		balance = bal; //Set the opening balance//
 		cust = new Customer(fName, lName,st,city1,pro,postal1);//this constructor should reflect the new additions above, street, city, province, postal code
-		acctID = fName.substring(0,1) + lName;
+		 													   //Create a new user using the provided information//
+		acctID = fName.substring(0,1) + lName; //Build the user ID using fisrt and last name//
 	}
 	
 	/**
@@ -29,9 +30,9 @@ public class Account {
 	 * post: An empty account has been created with the specified account ID.
 	 */
 	public Account(String ID) {
-		balance = 0;
-		cust = new Customer("", "","","","","");
-		acctID = ID;
+		balance = 0; //Set the balance equals to 0 (default)//
+		cust = new Customer("", "","","","",""); //Create a empty Customer placeholder//
+		acctID = ID; //Assign with the user ID)
 	}
 	/**
 	 * Returns the account ID.
@@ -39,7 +40,8 @@ public class Account {
 	 * post: The account ID has been returned.
 	 */
 	public String getID() {
-	 	return(acctID);
+	 	return(acctID); //Return the user ID linked with the account//
+						//Will be used to vertify the account//
 	}
 	/**
 	 * Returns the current balance.
@@ -47,7 +49,7 @@ public class Account {
 	 * post: The account balance has been returned.
 	 */
 	public double getBalance() {
-	 	return(balance);
+	 	return(balance); //Return balance, used to check if the transaction is working and determined how much money available for future transaction//
 	}
 	/**
 	 * A deposit is made to the account.
@@ -55,7 +57,7 @@ public class Account {
 	 * post: The balance has been increased by the amount of the deposit.
 	 */
 	public void deposit(double amt) {
-	 	balance += amt;
+	 	balance += amt; //Update balance after every deposit//
 	}
 	
 	/**
@@ -64,14 +66,15 @@ public class Account {
 	 * post: The balance has been decreased by the amount withdrawn.
 	 */
 	public void withdrawal(double amt) {
-	 		balance -= amt;
+	 		balance -= amt; //Update balance after every withdrawal//
+							//Note: Not include under $0, because this step will be included in PersonalAcct and BusinessAcct//
 	}
 	//Create a changeAddress() method that calls the cust object from above in order to change
 	public void changeAddress(String st, String city, String pro, String code) {
-		cust.changeStreet(st);
-		cust.changeCity(city);
-		cust.changeProvince(pro);
-		cust.changePostalCode(code);
+		cust.changeStreet(st); //Update street//
+		cust.changeCity(city); //Update city//
+		cust.changeProvince(pro); //Update province//
+		cust.changePostalCode(code); //Update postal code//
 	}
 	//Street, city, province, postalCode
 	
@@ -83,11 +86,11 @@ public class Account {
 	 * false returned otherwise.
 	 */
 	public boolean equals(Object acct) {
-		Account testAcct = (Account)acct;
+		Account testAcct = (Account)acct; //Check for user ID, whether the ID exists or not//
 		if (acctID.equals(testAcct.acctID)) {
-				return(true);
+				return(true); //Return true if the ID exist//
 			} else {
-				return(false);
+				return(false); //Return false if the ID not exist//
 			}
 	}
 	/**
@@ -102,7 +105,8 @@ public class Account {
 		accountString = "	◦" + acctID + "\n";
 		accountString += cust.toString() + "\n";
 		accountString += "	◦Current balance is " + money.format(balance);
-	 	return(accountString);
+	 	return(accountString); //Return the string for user to vertify their account information//
+							   //If required higher security, this can be used to code higher securty vertification//
 	}
 }
 
