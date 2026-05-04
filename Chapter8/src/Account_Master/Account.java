@@ -102,8 +102,8 @@ public class Account {
 	public String toString() {
 		String accountString;
 		NumberFormat money = NumberFormat.getCurrencyInstance();
-		accountString = "	◦" + acctID + "\n";
-		accountString += cust.toString() + "\n";
+		accountString = "	◦" + acctID + "\n"; //Add ID to thí version of toString//
+		accountString += cust.toString() + "\n"; //Paste the provided format here//
 		accountString += "	◦Current balance is " + money.format(balance);
 	 	return(accountString); //Return the string for user to vertify their account information//
 							   //If required higher security, this can be used to code higher securty vertification//
