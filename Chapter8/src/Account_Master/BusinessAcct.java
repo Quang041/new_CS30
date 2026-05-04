@@ -11,7 +11,7 @@ public class BusinessAcct extends Account {
 		super.deposit(amt); //Use the deposit method from the parent class to update to balance//
 	}
 
-	//Withdraws the gievn amount and charge $10 after the balance falls under $500//
+	//Withdraws the givenn amount and charge $10 after the balance falls under $500//
 	public void withdrawal(double amt) {
 	 	if (amt <= getBalance()) {
            super.withdrawal(amt); // use parent's withdrawal to withdraw that specific amount//
