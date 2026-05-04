@@ -16,10 +16,10 @@ package Vehicle_Master;
 public class client_test {
 	public static void main(String[] args) {
 	
-		Vehicle car = new Car(28, 39, 5, 15.1);
-		Vehicle truck = new Truck(20, 26, 3, 62.3);
-		Vehicle minivan = new Minivan(19, 28, 8, 32.8);
-		System.out.println(car.getInformation());
+		Vehicle car = new Car(28, 39, 5, 15.1); //Assume values for car//
+		Vehicle truck = new Truck(20, 26, 3, 62.3); //Assume values for truck//
+		Vehicle minivan = new Minivan(19, 28, 8, 32.8); //Assume values for minivan//
+		System.out.println(car.getInformation()); //Print out the information for each vehicle//
 		System.out.println(truck.getInformation());
 		System.out.println(minivan.getInformation());
 	
