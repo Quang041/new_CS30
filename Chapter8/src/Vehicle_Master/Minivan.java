@@ -12,7 +12,7 @@ public class Minivan extends Vehicle {
 						"•Capacity: " + seatingCapacity + " seats.\n" +
 						"•Cargo Volume: " + cargoVolume + " CBM.\n" +
 						"------------------------------------\n";
-		return information;
+		return information;//
 	}
 }
 
