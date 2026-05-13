@@ -12,7 +12,7 @@ public class Minivan extends Vehicle { //Minivan inherits from Vehicle, gaining 
 						"•Capacity: " + seatingCapacity + " seats.\n" + //Displays seating capacity inherited from Vehicle//
 						"•Cargo Volume: " + cargoVolume + " CBM.\n" + //Displays cargo volume inherited from Vehicle//
 						"------------------------------------\n";
-		return information;//
+		return information;
 	}
 }
 
