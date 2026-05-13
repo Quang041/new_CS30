@@ -3,8 +3,8 @@ package Account_Master;
 * Customer class.
 */
 public class Customer {
-	private String firstName, lastName;
-	private String street, city, province, postal;
+	private String firstName, lastName; //Stores the customer's first and last name//
+	private String street, city, province, postal; //Stores the customer's full address details//
 	//create String variables street, city, province, postal code	
 	
 	/**
@@ -15,43 +15,46 @@ public class Customer {
 	 */
 	public Customer(String fName, String lName, String st, String city1, String pro, String code) //modify constructor to include street, city, province, postal code
 	{
-		firstName = fName;
-		lastName = lName;
-		street = st;
-		city = city1;
-		province = pro;
-		postal = code;
+		firstName = fName; //Sets the first name//
+		lastName = lName; //Sets the last name//
+		street = st; //Sets the street//
+		city = city1; //Sets the city//
+		province = pro; //Sets the province//
+		postal = code; //Sets the postal code//
 		//reflect the changes in the parameter
 	}
 	
 	//create changeCity method that asks the user their city and records city in a variable above
 	public void changeCity(String city1) {
-		city = city1;
+		city = city1; //Updates the city to the provided value//
 	}
 	public String getCity() {
-		return city;
+		return city; //*//
 	}
 	//create changeStreet method that asks the user their street and records street in a variable above
-	public void changeStreet(String st) {
-		street = st;
+	public void changeStreet(String st) { 
+		street = st; //Updates the street to the provided value//
 	}
 	public String getStreet() {
-		return street;
+		return street; //*//
 	}
 	//create changeProvince method that asks the user their province and records province in a variable above
 	public void changeProvince(String pro) {
-		province = pro;
+		province = pro; //Updates the province to the provided value//
 	}
 	public String getProvince() {
-		return province;
+		return province; //*//
 	}
 	//create changePostalCode method that asks the user their postal code and records postal code in a variable above
 	public void changePostalCode(String code) {
-		postal = code;
+		postal = code; //Updates the postal code to the provided value//
 	}
 	public String getPostalCode() {
-		return postal;
-	}
+		return postal; //*//
+	} 
+    //*: I tend to use these value to create a function to reset information in case user forgot their ID and use this to verify their information//
+
+	
 	/**
 	 * Returns a String that represents the Customer object.
 	 * pre: none
@@ -67,7 +70,7 @@ public class Customer {
 				+ "	◦City: " + city + "\n"
 				+ "	◦Province: " + province + "\n"
 				+ "	◦Postal code: " + postal;
-	 	return(custString);
+	 	return(custString);  //Set the information for user to check after create new account//
 	}
 }
 
